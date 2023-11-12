@@ -43,10 +43,9 @@ namespace GGPOsharp.Tests
         public void AddRemotePlayerTest()
         {
             ggpo.StartSession(session.CreateCallbacks(), "GGPOSharp", 2, 8, 10600);
-            
-            int handle;
+
             GGPOPlayer player = GGPO.CreateRemotePlayer(1, "127.0.0.1", 10600);
-            GGPO.ErrorCode result = ggpo.AddPlayer(ref player, out handle);
+            GGPO.ErrorCode result = ggpo.AddPlayer(ref player, out var handle);
             Assert.True(GGPO.Succeeded(result), String.Format("Could not add remote player: {0}", result));
         }
 

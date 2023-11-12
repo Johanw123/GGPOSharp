@@ -39,7 +39,7 @@ namespace GGPOSharpTests
             return;
         }
 
-        public bool LoadGameState(byte[] buffer, int len)
+        public bool LoadGameState(IntPtr buffer, int len)
         {
             return true;
         }
@@ -54,7 +54,7 @@ namespace GGPOSharpTests
             return true;
         }
 
-        public bool SaveGameState(ref byte[] buffer, ref int len, ref int checksum, int frame)
+        public bool SaveGameState(ref IntPtr buffer, ref int len, ref int checksum, int frame)
         {
             return true;
         }

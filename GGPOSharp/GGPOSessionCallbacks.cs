@@ -6,9 +6,9 @@ namespace GGPOSharp
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
     public delegate bool BeginGame(string game);
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-    public delegate bool SaveGameState(ref byte[] buffer, ref int len, ref int checksum, int frame);
+    public delegate bool SaveGameState(ref IntPtr buffer, ref int len, ref int checksum, int frame);
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-    public delegate bool LoadGameState(byte[] buffer, int len);
+    public delegate bool LoadGameState(IntPtr buffer, int len);
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
     public delegate bool LogGameState(string filename, byte[] buffer, int len);
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]

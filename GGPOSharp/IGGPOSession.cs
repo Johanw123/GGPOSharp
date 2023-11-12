@@ -25,7 +25,7 @@ namespace GGPOSharp
         /// <param name="checksum"></param>
         /// <param name="frame"></param>
         /// <returns></returns>
-        bool SaveGameState(ref byte[] buffer, ref int len, ref int checksum, int frame);
+        bool SaveGameState(ref IntPtr buffer, ref int len, ref int checksum, int frame);
         /// <summary>
         /// GGPO.net will call this function at the beginning
         /// of a rollback.The buffer and len parameters contain a previously
@@ -36,7 +36,7 @@ namespace GGPOSharp
         /// <param name="buffer"></param>
         /// <param name="len"></param>
         /// <returns></returns>
-        bool LoadGameState(byte[] buffer, int len);
+        bool LoadGameState(IntPtr buffer, int len);
         /// <summary>
         /// Used in diagnostic testing. GGPO will only call this function when using
         /// the synctest debugging tool.

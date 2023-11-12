@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "GGPOSharp": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}
